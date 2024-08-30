@@ -15,7 +15,7 @@ function LoginPage({ setLoading }) {
     setLoading(true);
     try {
       const endpoint = isLogin ? '/api/auth/login' : '/api/auth/register';
-      const response = await axios.post(`https://notesappbackend-oqkq.onrender.com${endpoint}`, { username, password });
+      const response = await axios.post(`https://notes-js-k6ws.onrender.com${endpoint}`, { username, password });
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);
         localStorage.setItem('username', response.data.username);
